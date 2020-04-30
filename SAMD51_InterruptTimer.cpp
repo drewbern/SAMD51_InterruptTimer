@@ -33,7 +33,7 @@ void TC_Timer::startTimer(unsigned long period, void (*f)()) {
   
   // Use match mode so that the timer counter resets when the count matches the
   // compare register
-  TC3->COUNT16.WAVE.bit.WAVEGEN = TC_WAVE_WAVEGEN_MFRQ;
+  TC3->COUNT16.WAVE.bit.WAVEGEN = TCC_WAVE_WAVEGEN_MFRQ;
   TC3_wait_for_sync();
   
    // Enable the compare interrupt
